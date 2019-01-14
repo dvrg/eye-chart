@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+
+/* 
+---------------------------
+Chart defaults
+---------------------------
+*/
+body {
+  background-color: #b4c5c7;
+  transition: all 0.2s;
+}
+.wrapper {
+  font-size:100%; /*set font-size in % for easy scaling*/
+  max-width: 500px;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.chart {
+  font-family: 'Cutive Mono', 'Courier New', courier, monospace;
+  font-weight: 900;
+  background: #fff;
+  padding: 8% 10%;
+  margin: 20px auto 10px auto;
+  border: 10px solid black;
+  cursor: url(https://cl.ly/image/1m2W3D2u0y3A/magnify.png), pointer;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.letter {
+	display: inline-block;
+}
+
+p {
+	font-size: 80%;
+	color: #6F6F6F;
+}
+
+/* 
+---------------------------
+Lines
+---------------------------
+*/
+.line-1 {
+	font-size: 1000%;
+	line-height: 90%;
+}
+
+.line-2 {
+	font-size: 800%; 
+	line-height: 80%;
+	margin-left: -20px; /* Makes up for the shift from the negative margins applied in the next rule */
+}
+
+.line-2 .letter {
+	margin-right: -20px; /* Bring the two "s" a little closer together */
+}
+
+.line-3 {
+	font-size: 500%;
+}
+
+.line-4 {
+	font-size: 400%;
+}
+
+.line-5 {
+	font-size: 300%;
+	margin-bottom: 20px;
+	position: relative;
+}
+/* Creates the horizontal border after line 5 */
+.line-5:after {
+	content: '';
+	height: 5px;
+	width:100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 70px;
+	left: 0;
+	box-shadow: 0 0 8px rgba(0,0,0,1);
+}
+
+/* Hover effect for horizontal border */
+.line-5:hover:after {
+	background-color: rgba(0,0,0,1);
+	box-shadow: none;
+}
+
+.line-6 {
+	font-size: 200%;
+}
+
+.line-7 {
+	font-size: 100%;
+}
+
+/* A little breathing room for lines 6... */
+.line-6 .letter {
+	padding: 20px 5px;
+}
+/* ...and 7 */
+.line-7 .letter {
+	padding: 10px 5px;
+}
+
+/*
+-------------------------
+Blur effects
+-------------------------
+*/
+
+/*Make actual letters transparent so we see only the shadow*/
+.line-2,
+.line-3,
+.line-4,
+.line-5,
+.line-6,
+.line-7 {
+	color: transparent;
+}
+
+.line-2 {
+	text-shadow: 0 0 3px rgba(0,0,0,1);
+}
+
+.line-3 {
+	text-shadow: 0 0 5px rgba(0,0,0,1);
+}
+
+.line-4 {
+	text-shadow: 0 0 6px rgba(0,0,0,1);
+}
+
+.line-5 {
+	text-shadow: 0 0 8px rgba(0,0,0,1);
+}
+
+.line-6 {
+	text-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.line-7 {
+	text-shadow: 0 0 12px rgba(0,0,0,1);
+}
+
+/*On hover, remove shadow and bring back the font color*/
+.letter:hover {
+	text-shadow: none;
+	color: #000;
+}
+
+/*
+-------------------------
+Zoom effects
+-------------------------
+*/
+.chart {
+  transform:scale(1.2);
+}
